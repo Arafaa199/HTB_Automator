@@ -52,8 +52,8 @@ now you can just type 'hvpn' or 'hmap <box_name> <box_ip>' and it would do its m
 
 Clone the repository
 
-git clone https://github.com/*****************.git
-cd Auto_HTB
+git clone https://github.com/Arafaa199/HTB_Automator.git
+cd HTB_Automator
 chmod +x htb_vpn.sh htb_scan.sh
 
 
