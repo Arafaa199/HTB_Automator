@@ -6,21 +6,19 @@ if [ "$#" -ne 2 ]; then
    exit 1
 fi
 
-# Assign arguments to variables
 box_name="$1"
 box_ip="$2"
 
-# Define the base directory for storing boxes
+# base dir for storing boxes
 base_dir="$HOME/HTB"
 
-# Ensure the base directory exists
+# ensure base directory exists
 mkdir -p "$base_dir"
 
 # Create a directory named after the box within the base directory
 box_dir="$base_dir/$box_name"
 mkdir -p "$box_dir"
 
-# Create a text file named after the box in the directory for notes
 box_file="$box_dir/$box_name.txt"
 touch "$box_file"
 
@@ -33,10 +31,8 @@ if [ -z "$ports" ]; then
    exit 1
 fi
 
-# Perform a detailed scan on open ports with scripts and version detection
 nmap -p"$ports" -sC -sV "$box_ip" -oN "$box_dir/nmap_scan.txt"
 
 echo "Detailed scan saved to $box_file"
 
-# Open the text file in a preferred editor for notes
 nano "$box_file"
