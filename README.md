@@ -16,11 +16,11 @@ Automated Organization: Moves the latest `.ovpn` file from the Downloads directo
 
 
 
-**HMAP - Scanner & Organizer**
+**NMAP - Scanner & Organizer**
 
 it works as so:
 
-This script is designed to help with managing HTB box managament, specifically by organizing and scanning boxes from Hack The Box or other similar platforms.
+This script is designed to help with managing HTB box , specifically by organizing and scanning boxes from Hack The Box or other similar platforms.
 
 Basically it creates a directory for your HTB boxes with the relevent name, additionally creating a .txt file for your notes; and most importantly automates typing the nmap script and saves it to a file.
 
@@ -35,7 +35,7 @@ Notes and Results: Saves scan results to a text file and opens it in a text edit
 **Add Alias**
 I also suggest adding the .sh files as an alias in your .bashrc or .zshrc (or whatever shell you use). This can be done in the following way:
 
-    sudo nano ~/.bashrc      #again, or .zshrc (type ‘echo $SHELL’ to know your shell)
+    sudo nano ~/.bashrc      #or ~/.zshrc depending on your shell (‘echo $SHELL’ to find out which shell you use)
 
 Find the alias section at the bottom and add the following:
 
