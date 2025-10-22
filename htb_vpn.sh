@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Define a config file for storing the chosen directory path
 config_file="$HOME/.vpn_config"
 
 if [ -f "$config_file" ]; then
@@ -11,7 +10,6 @@ else
    echo "No base directory set. Please choose a directory to store VPN files:"
    read -r base_dir
 
-   # create the base dir and HTB_VPN
    mkdir -p "$base_dir/HTB_VPN"
 
    echo "$base_dir" > "$config_file"
@@ -34,7 +32,6 @@ if [ ! -d "$downloads_dir" ]; then
    exit 1
 fi
 
-# find the last `.ovpn` file in Downloads
 latest_vpn_file=$(ls -t "$downloads_dir"/*.ovpn 2>/dev/null | head -n 1)
 
 if [ -n "$latest_vpn_file" ]; then
